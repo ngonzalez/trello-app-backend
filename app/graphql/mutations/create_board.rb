@@ -1,4 +1,3 @@
-require 'pry'
 module Mutations
   class CreateBoard < Mutations::BaseMutation
     graphql_name "CreateBoard"

@@ -1,6 +1,6 @@
 module Mutations
-  class BoardsList < Mutations::BaseMutation
-    graphql_name "BoardsList"
+  class ListBoards < Mutations::BaseMutation
+    graphql_name "ListBoards"
 
     argument :page, Integer, required: true
 
@@ -11,13 +11,13 @@ module Mutations
     def resolve(args)
       boards = Board.order("created_at::timestamp DESC")
 
-      paginated_results = Kaminari.paginate_array(boards).page(args[:page]).per(15)
+      paginated_results = Kaminari.paginate_array(boards).page(args[:page]).per(5)
 
       MutationResultPaginated.call(
         obj: {
           results: paginated_results,
         },
-        loading: false,
+        success: true,
         errors: [],
         current_page: paginated_results.current_page,
         total_pages: paginated_results.total_pages,
