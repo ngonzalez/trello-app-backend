@@ -6,3 +6,4 @@ dragonfly
 public
 gcp.json
 .env
+tmp/pids/server.pid
