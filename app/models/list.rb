@@ -3,7 +3,7 @@
 # Table name: lists
 #
 #  id         :bigint           not null, primary key
-#  closed     :boolean          not null
+#  closed     :boolean
 #  deleted_at :datetime
 #  name       :string           not null
 #  created_at :datetime         not null

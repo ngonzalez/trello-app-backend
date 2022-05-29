@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_28_153927) do
     t.integer "board_id", null: false
     t.string "name", null: false
     t.string "item_id", null: false
-    t.boolean "closed", null: false
+    t.boolean "closed"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
