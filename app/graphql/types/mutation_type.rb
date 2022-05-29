@@ -5,5 +5,7 @@ module Types
     field :delete_board, mutation: Mutations::DeleteBoard
     field :get_board, mutation: Mutations::GetBoard
     field :create_lists, mutation: Mutations::CreateLists
+    field :get_list, mutation: Mutations::GetList
+    field :create_card, mutation: Mutations::CreateCard
   end
 end

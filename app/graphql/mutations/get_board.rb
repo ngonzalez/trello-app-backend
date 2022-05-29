@@ -8,17 +8,13 @@ module Mutations
     field :lists, [Types::List], null: false
 
     def resolve(args)
-      begin
-        board = Board.find_by(item_id: args[:item_id])
+      board = Board.find_by(item_id: args[:item_id])
 
-        MutationResult.call(
-          obj: { board: board, lists: board.lists },
-          success: board.present?,
-          errors: board.errors,
-        )
-      rescue ActiveRecord::RecordInvalid => exception
-        GraphQL::ExecutionError.new(exception.message)
-      end
+      MutationResult.call(
+        obj: { board: board, lists: board.lists },
+        success: board.present?,
+        errors: board.errors,
+      )
     end
   end
 end
