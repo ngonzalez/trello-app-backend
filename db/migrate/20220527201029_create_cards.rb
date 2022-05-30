@@ -2,6 +2,7 @@ class CreateCards < ActiveRecord::Migration[7.0]
   def change
     create_table :cards do |t|
       t.integer :list_id, null: false
+      t.string :list_item_id, null: false
       t.string :name, null: false, unique: true
       t.string :item_id, null: false, unique: true
       t.string :desc, null: false

@@ -27,6 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_28_153927) do
 
   create_table "cards", force: :cascade do |t|
     t.integer "list_id", null: false
+    t.string "list_item_id", null: false
     t.string "name", null: false
     t.string "item_id", null: false
     t.string "desc", null: false

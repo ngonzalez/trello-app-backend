@@ -7,7 +7,7 @@ module Types
 
     field :name, String, null: false
     field :item_id, String, null: false
-    field :list_id, String, null: false
+    field :list_item_id, String, null: false
     field :desc, String, null: false
     field :due, String, null: false
     field :start, String, null: false

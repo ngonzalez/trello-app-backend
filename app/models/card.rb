@@ -14,6 +14,7 @@
 #  updated_at   :datetime         not null
 #  item_id      :string           not null
 #  list_id      :integer          not null
+#  list_item_id :string           not null
 #
 # Indexes
 #
