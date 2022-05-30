@@ -13,7 +13,7 @@ module Mutations
 
     def resolve(args)
       list = List.find_by(item_id: args[:list_id])
-      card = list.cards.new(
+      card = list.cards.create!(
         name: args[:name],
         item_id: args[:item_id],
         desc: args[:desc],
