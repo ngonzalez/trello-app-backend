@@ -58,17 +58,3 @@ if ENV['REDIS_DB'].present?
 else
   raise "Missing ENV REDIS_DB"
 end
-
-# TRELLO_API_KEY
-if ENV['TRELLO_API_KEY'].present?
-  TRELLO_API_KEY = ENV['TRELLO_API_KEY']
-else
-  raise "Missing ENV TRELLO_API_KEY"
-end
-
-# TRELLO_API_TOKEN
-if ENV['TRELLO_API_TOKEN'].present?
-  TRELLO_API_TOKEN = ENV['TRELLO_API_TOKEN']
-else
-  raise "Missing ENV TRELLO_API_TOKEN"
-end
